@@ -7,14 +7,44 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heaven and Hell"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="479dp" />
+
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blacksabbathcover" />
+        app:srcCompat="@drawable/blacksabbathcover"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="150dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Black Sabbath"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="549dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar4"
+        android:layout_width="171dp"
+        android:layout_height="25dp"
+        android:rotationX="@integer/material_motion_duration_short_1"
+        android:rotationY="@integer/material_motion_duration_long_1"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="634dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar6"
+        android:layout_width="171dp"
+        android:layout_height="25dp"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="695dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
