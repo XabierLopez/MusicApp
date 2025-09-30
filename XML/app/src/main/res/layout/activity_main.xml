@@ -8,117 +8,142 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/titulua"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleX="3"
         android:scaleY="3"
         android:text="@string/heaven_and_hell"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintBottom_toTopOf="@+id/taldea"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/cover" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/cover"
         android:layout_width="299dp"
         android:layout_height="290dp"
         android:contentDescription="@string/heavenAndHellCover"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/titulua"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/blacksabbathcover" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/taldea"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleX="2"
         android:scaleY="2"
         android:text="@string/black_sabbath"
-        app:layout_constraintBottom_toTopOf="@+id/seekBar6"
+        app:layout_constraintBottom_toTopOf="@+id/denboraBarra"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/titulua" />
 
     <SeekBar
-        android:id="@+id/seekBar6"
+        android:id="@+id/denboraBarra"
         android:layout_width="171dp"
         android:layout_height="25dp"
         android:scaleX="2"
         android:scaleY="1.8"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/play"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/taldea" />
 
     <SeekBar
-        android:id="@+id/seekBar2"
+        android:id="@+id/bolumenBarra"
         android:layout_width="171dp"
         android:layout_height="25dp"
-        android:rotation="90"
+        android:rotation="-90"
         android:scaleX="2"
         android:scaleY="1.6"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintBottom_toBottomOf="@+id/cover"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+        app:layout_constraintStart_toEndOf="@+id/cover"
+        app:layout_constraintTop_toTopOf="@+id/cover" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_media_play"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="871dp" />
+        app:layout_constraintBottom_toTopOf="@+id/lista"
+        app:layout_constraintEnd_toStartOf="@+id/hurrengoa"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/aurrekoa"
+        app:layout_constraintTop_toBottomOf="@+id/denboraBarra"
+        app:srcCompat="@android:drawable/ic_media_play" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/aurrekoa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_media_previous"
-        tools:layout_editor_absoluteX="187dp"
-        tools:layout_editor_absoluteY="869dp" />
+        app:layout_constraintBottom_toTopOf="@+id/letra"
+        app:layout_constraintEnd_toStartOf="@+id/play"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/denboraBarra"
+        app:srcCompat="@android:drawable/ic_media_previous" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/hurrengoa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_media_next"
-        tools:layout_editor_absoluteX="253dp"
-        tools:layout_editor_absoluteY="877dp" />
+        app:layout_constraintBottom_toTopOf="@+id/partekatu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/play"
+        app:layout_constraintTop_toBottomOf="@+id/denboraBarra"
+        app:srcCompat="@android:drawable/ic_media_next" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/partekatu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_menu_share"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="877dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lista"
+        app:layout_constraintTop_toBottomOf="@+id/hurrengoa"
+        app:srcCompat="@android:drawable/ic_menu_share" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/lista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_menu_sort_by_size"
-        tools:layout_editor_absoluteX="324dp"
-        tools:layout_editor_absoluteY="860dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/partekatu"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/letra"
+        app:layout_constraintTop_toBottomOf="@+id/play"
+        app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
 
     <ImageButton
-        android:id="@+id/imageButton7"
+        android:id="@+id/bolumenIkonoa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-        tools:layout_editor_absoluteX="324dp"
-        tools:layout_editor_absoluteY="441dp" />
+        app:layout_constraintBottom_toTopOf="@+id/cover"
+        app:layout_constraintEnd_toEndOf="@+id/bolumenBarra"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/bolumenBarra"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/letra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_menu_sort_alphabetically"
-        tools:layout_editor_absoluteX="309dp"
-        tools:layout_editor_absoluteY="756dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/lista"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aurrekoa"
+        app:srcCompat="@android:drawable/ic_menu_sort_alphabetically" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
