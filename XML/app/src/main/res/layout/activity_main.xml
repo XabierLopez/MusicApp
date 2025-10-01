@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundvertical"
     tools:context=".MainActivity">
 
     <TextView
@@ -14,6 +15,7 @@
         android:scaleX="3"
         android:scaleY="3"
         android:text="@string/heaven_and_hell"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/taldea"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
