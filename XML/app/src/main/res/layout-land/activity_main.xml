@@ -18,21 +18,18 @@
         android:text="@string/heaven_and_hell"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/taldea"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cover" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="356dp" />
 
     <ImageView
         android:id="@+id/cover"
         android:layout_width="299dp"
         android:layout_height="290dp"
         android:contentDescription="@string/heavenAndHellCover"
-        app:layout_constraintBottom_toTopOf="@+id/titulua"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.495"
         app:srcCompat="@drawable/blacksabbathcover" />
 
     <TextView
@@ -45,44 +42,10 @@
         android:text="@string/black_sabbath"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/denboraBarra"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulua" />
+        app:layout_constraintTop_toBottomOf="@+id/titulua"
+        tools:layout_editor_absoluteX="342dp" />
 
-    <SeekBar
-        android:id="@+id/denboraBarra"
-        android:layout_width="171dp"
-        android:layout_height="25dp"
-        android:progressTint="#000000"
-        android:scaleX="2"
-        android:scaleY="1.6"
-        android:thumbTint="@color/white"
-        android:progressDrawable="@drawable/barra_pertsonalizatua"
-        android:thumb="@drawable/thumb_pertsonalizatua"
-        app:layout_constraintBottom_toTopOf="@+id/play"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/taldea" />
-
-    <SeekBar
-        android:id="@+id/bolumenBarra"
-        android:layout_width="171dp"
-        android:layout_height="25dp"
-        android:progressTint="@color/black"
-        android:rotation="-90"
-        android:scaleX="2"
-        android:scaleY="1.6"
-        android:thumbTint="@color/white"
-        android:progressDrawable="@drawable/barra_pertsonalizatua"
-        android:thumb="@drawable/thumb_pertsonalizatua"
-        app:layout_constraintBottom_toBottomOf="@+id/cover"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cover"
-        app:layout_constraintTop_toTopOf="@+id/cover" />
-
-<!--    <ImageButton-->
+    <!--    <ImageButton-->
 <!--        android:id="@+id/play"-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->
@@ -174,103 +137,98 @@
 <!--        app:srcCompat="@android:drawable/ic_menu_sort_alphabetically"-->
 <!--        app:tint="#FFFFFF" />-->
 
+    <SeekBar
+        android:id="@+id/denboraBarra"
+        android:layout_width="171dp"
+        android:layout_height="25dp"
+        android:progressDrawable="@drawable/barra_pertsonalizatua"
+        android:progressTint="#000000"
+        android:scaleX="2"
+        android:scaleY="1.6"
+        android:thumb="@drawable/thumb_pertsonalizatua"
+        android:thumbTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/play"
+        app:layout_constraintTop_toBottomOf="@+id/taldea"
+        tools:layout_editor_absoluteX="342dp" />
+
+    <SeekBar
+        android:id="@+id/bolumenBarra"
+        android:layout_width="171dp"
+        android:layout_height="25dp"
+        android:progressDrawable="@drawable/barra_pertsonalizatua"
+        android:progressTint="@color/black"
+        android:rotation="-90"
+        android:scaleX="2"
+        android:scaleY="1.6"
+        android:thumb="@drawable/thumb_pertsonalizatua"
+        android:thumbTint="@color/white"
+        tools:layout_editor_absoluteX="603dp"
+        tools:layout_editor_absoluteY="176dp" />
+
     <ImageView
         android:id="@+id/aurrekoa"
         android:layout_width="72dp"
         android:layout_height="56dp"
-        app:tint="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/letra"
-        app:layout_constraintEnd_toStartOf="@+id/play"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/denboraBarra"
         app:srcCompat="@drawable/aurrekoa"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="508dp" />
+        app:tint="#FFFFFF"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="299dp" />
 
     <ImageView
         android:id="@+id/play"
         android:layout_width="72dp"
         android:layout_height="56dp"
-        app:tint="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/lista"
-        app:layout_constraintEnd_toStartOf="@+id/hurrengoa"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/aurrekoa"
         app:layout_constraintTop_toBottomOf="@+id/denboraBarra"
         app:srcCompat="@drawable/play"
-        tools:layout_editor_absoluteX="145dp"
-        tools:layout_editor_absoluteY="637dp" />
+        app:tint="#FFFFFF"
+        tools:layout_editor_absoluteX="330dp" />
 
     <ImageView
         android:id="@+id/hurrengoa"
         android:layout_width="72dp"
         android:layout_height="56dp"
-        app:tint="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/partekatu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/play"
-        app:layout_constraintTop_toBottomOf="@+id/denboraBarra"
         app:srcCompat="@drawable/hurrengoa"
-        tools:layout_editor_absoluteX="115dp"
-        tools:layout_editor_absoluteY="612dp" />
+        app:tint="#FFFFFF"
+        tools:layout_editor_absoluteX="531dp"
+        tools:layout_editor_absoluteY="299dp" />
 
     <ImageView
         android:id="@+id/letra"
         android:layout_width="72dp"
         android:layout_height="56dp"
-        app:tint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/lista"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/aurrekoa"
         app:srcCompat="@drawable/letra"
-        tools:layout_editor_absoluteX="97dp"
-        tools:layout_editor_absoluteY="620dp" />
+        app:tint="#FFFFFF"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="355dp" />
 
     <ImageView
         android:id="@+id/lista"
         android:layout_width="72dp"
         android:layout_height="56dp"
-        app:tint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/partekatu"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/letra"
         app:layout_constraintTop_toBottomOf="@+id/play"
         app:srcCompat="@drawable/lista"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="723dp" />
+        app:tint="#FFFFFF"
+        tools:layout_editor_absoluteX="330dp" />
 
     <ImageView
         android:id="@+id/partekatu"
         android:layout_width="72dp"
         android:layout_height="56dp"
-        app:tint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/lista"
-        app:layout_constraintTop_toBottomOf="@+id/hurrengoa"
         app:srcCompat="@drawable/partekatu"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="717dp" />
+        app:tint="#FFFFFF"
+        tools:layout_editor_absoluteX="531dp"
+        tools:layout_editor_absoluteY="355dp" />
 
     <ImageView
         android:id="@+id/soinua"
         android:layout_width="72dp"
         android:layout_height="56dp"
-        app:tint="#FFFFFF"
         android:clickable="false"
-        app:layout_constraintBottom_toTopOf="@+id/cover"
-        app:layout_constraintEnd_toEndOf="@+id/bolumenBarra"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/bolumenBarra"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/soinua"
-        tools:layout_editor_absoluteX="91dp"
+        app:tint="#FFFFFF"
+        tools:layout_editor_absoluteX="587dp"
         tools:layout_editor_absoluteY="616dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
