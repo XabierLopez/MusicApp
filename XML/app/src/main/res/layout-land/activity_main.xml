@@ -18,8 +18,9 @@
         android:text="@string/heaven_and_hell"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/taldea"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="356dp" />
+        app:layout_constraintEnd_toStartOf="@+id/bolumenBarra"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/cover"
@@ -27,9 +28,9 @@
         android:layout_height="290dp"
         android:contentDescription="@string/heavenAndHellCover"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.495"
         app:srcCompat="@drawable/blacksabbathcover" />
 
     <TextView
@@ -42,114 +43,118 @@
         android:text="@string/black_sabbath"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/denboraBarra"
-        app:layout_constraintTop_toBottomOf="@+id/titulua"
-        tools:layout_editor_absoluteX="342dp" />
+        app:layout_constraintEnd_toStartOf="@+id/bolumenBarra"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/titulua" />
 
     <!--    <ImageButton-->
-<!--        android:id="@+id/play"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:backgroundTint="#4334B3"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/lista"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/hurrengoa"-->
-<!--        app:layout_constraintHorizontal_bias="0.5"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/aurrekoa"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/denboraBarra"-->
-<!--        app:srcCompat="@android:drawable/ic_media_play"-->
-<!--        app:tint="#FFFFFF" />-->
+    <!--        android:id="@+id/play"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:backgroundTint="#4334B3"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/lista"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/hurrengoa"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/aurrekoa"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/denboraBarra"-->
+    <!--        app:srcCompat="@android:drawable/ic_media_play"-->
+    <!--        app:tint="#FFFFFF" />-->
 
-<!--    <ImageButton-->
-<!--        android:id="@+id/aurrekoa"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:backgroundTint="#4334B3"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/letra"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/play"-->
-<!--        app:layout_constraintHorizontal_bias="0.5"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/denboraBarra"-->
-<!--        app:srcCompat="@android:drawable/ic_media_previous"-->
-<!--        app:tint="#FFFFFF" />-->
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/aurrekoa"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:backgroundTint="#4334B3"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/letra"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/play"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/denboraBarra"-->
+    <!--        app:srcCompat="@android:drawable/ic_media_previous"-->
+    <!--        app:tint="#FFFFFF" />-->
 
-<!--    <ImageButton-->
-<!--        android:id="@+id/hurrengoa"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:backgroundTint="#4334B3"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/partekatu"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.5"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/play"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/denboraBarra"-->
-<!--        app:srcCompat="@android:drawable/ic_media_next"-->
-<!--        app:tint="#FFFFFF" />-->
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/hurrengoa"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:backgroundTint="#4334B3"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/partekatu"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/play"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/denboraBarra"-->
+    <!--        app:srcCompat="@android:drawable/ic_media_next"-->
+    <!--        app:tint="#FFFFFF" />-->
 
-<!--    <ImageButton-->
-<!--        android:id="@+id/partekatu"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:backgroundTint="#4334B3"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.5"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/lista"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/hurrengoa"-->
-<!--        app:srcCompat="@android:drawable/ic_menu_share"-->
-<!--        app:tint="#FFFFFF" />-->
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/partekatu"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:backgroundTint="#4334B3"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/lista"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/hurrengoa"-->
+    <!--        app:srcCompat="@android:drawable/ic_menu_share"-->
+    <!--        app:tint="#FFFFFF" />-->
 
-<!--    <ImageButton-->
-<!--        android:id="@+id/lista"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:backgroundTint="#4334B3"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/partekatu"-->
-<!--        app:layout_constraintHorizontal_bias="0.5"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/letra"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/play"-->
-<!--        app:srcCompat="@android:drawable/ic_menu_sort_by_size"-->
-<!--        app:tint="#FFFFFF" />-->
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/lista"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:backgroundTint="#4334B3"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/partekatu"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/letra"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/play"-->
+    <!--        app:srcCompat="@android:drawable/ic_menu_sort_by_size"-->
+    <!--        app:tint="#FFFFFF" />-->
 
-<!--    <ImageButton-->
-<!--        android:id="@+id/soinua"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:backgroundTint="#4334B3"-->
-<!--        android:clickable="false"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/cover"-->
-<!--        app:layout_constraintEnd_toEndOf="@+id/bolumenBarra"-->
-<!--        app:layout_constraintHorizontal_bias="0.495"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/bolumenBarra"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:srcCompat="@android:drawable/ic_lock_silent_mode_off"-->
-<!--        app:tint="#FFFFFF" />-->
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/soinua"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:backgroundTint="#4334B3"-->
+    <!--        android:clickable="false"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/cover"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/bolumenBarra"-->
+    <!--        app:layout_constraintHorizontal_bias="0.495"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/bolumenBarra"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:srcCompat="@android:drawable/ic_lock_silent_mode_off"-->
+    <!--        app:tint="#FFFFFF" />-->
 
-<!--    <ImageButton-->
-<!--        android:id="@+id/letra"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:backgroundTint="#4334B3"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/lista"-->
-<!--        app:layout_constraintHorizontal_bias="0.5"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/aurrekoa"-->
-<!--        app:srcCompat="@android:drawable/ic_menu_sort_alphabetically"-->
-<!--        app:tint="#FFFFFF" />-->
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/letra"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:backgroundTint="#4334B3"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/lista"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/aurrekoa"-->
+    <!--        app:srcCompat="@android:drawable/ic_menu_sort_alphabetically"-->
+    <!--        app:tint="#FFFFFF" />-->
 
     <SeekBar
         android:id="@+id/denboraBarra"
         android:layout_width="171dp"
         android:layout_height="25dp"
+        android:progress="25"
         android:progressDrawable="@drawable/barra_pertsonalizatua"
         android:progressTint="#000000"
         android:scaleX="2"
         android:scaleY="1.6"
         android:thumb="@drawable/thumb_pertsonalizatua"
         android:thumbTint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/play"
-        app:layout_constraintTop_toBottomOf="@+id/taldea"
-        tools:layout_editor_absoluteX="342dp" />
+        app:layout_constraintBottom_toTopOf="@+id/playPause"
+        app:layout_constraintEnd_toStartOf="@+id/faltaDenDenbora"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/pasatutakoDenbora"
+        app:layout_constraintTop_toBottomOf="@+id/taldea" />
 
     <SeekBar
         android:id="@+id/bolumenBarra"
@@ -162,73 +167,131 @@
         android:scaleY="1.6"
         android:thumb="@drawable/thumb_pertsonalizatua"
         android:thumbTint="@color/white"
-        tools:layout_editor_absoluteX="603dp"
-        tools:layout_editor_absoluteY="176dp" />
+        android:progress="70"
+        app:layout_constraintBottom_toBottomOf="@+id/cover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/denboraBarra"
+        app:layout_constraintTop_toTopOf="@+id/cover" />
 
     <ImageView
         android:id="@+id/aurrekoa"
         android:layout_width="72dp"
         android:layout_height="56dp"
-        app:srcCompat="@drawable/aurrekoa"
-        app:tint="#FFFFFF"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="299dp" />
-
-    <ImageView
-        android:id="@+id/play"
-        android:layout_width="72dp"
-        android:layout_height="56dp"
-        app:layout_constraintBottom_toTopOf="@+id/lista"
+        app:layout_constraintBottom_toTopOf="@+id/letra"
+        app:layout_constraintEnd_toStartOf="@+id/playPause"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/denboraBarra"
-        app:srcCompat="@drawable/play"
-        app:tint="#FFFFFF"
-        tools:layout_editor_absoluteX="330dp" />
-
-    <ImageView
-        android:id="@+id/hurrengoa"
-        android:layout_width="72dp"
-        android:layout_height="56dp"
-        app:srcCompat="@drawable/hurrengoa"
-        app:tint="#FFFFFF"
-        tools:layout_editor_absoluteX="531dp"
-        tools:layout_editor_absoluteY="299dp" />
+        app:srcCompat="@drawable/aurrekoa"
+        app:tint="#FFFFFF" />
 
     <ImageView
         android:id="@+id/letra"
         android:layout_width="72dp"
         android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/lista"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/aurrekoa"
         app:srcCompat="@drawable/letra"
-        app:tint="#FFFFFF"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="355dp" />
+        app:tint="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/playPause"
+        android:layout_width="72dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toTopOf="@+id/lista"
+        app:layout_constraintEnd_toStartOf="@+id/hurrengoa"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/aurrekoa"
+        app:layout_constraintTop_toBottomOf="@+id/denboraBarra"
+        app:srcCompat="@drawable/play"
+        app:tint="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/hurrengoa"
+        android:layout_width="72dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toTopOf="@+id/partekatu"
+        app:layout_constraintEnd_toStartOf="@+id/bolumenBarra"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/playPause"
+        app:layout_constraintTop_toBottomOf="@+id/denboraBarra"
+        app:srcCompat="@drawable/hurrengoa"
+        app:tint="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/partekatu"
+        android:layout_width="72dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bolumenBarra"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lista"
+        app:layout_constraintTop_toBottomOf="@+id/hurrengoa"
+        app:srcCompat="@drawable/partekatu"
+        app:tint="#FFFFFF" />
 
     <ImageView
         android:id="@+id/lista"
         android:layout_width="72dp"
         android:layout_height="56dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/play"
+        app:layout_constraintEnd_toStartOf="@+id/partekatu"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/letra"
+        app:layout_constraintTop_toBottomOf="@+id/playPause"
         app:srcCompat="@drawable/lista"
-        app:tint="#FFFFFF"
-        tools:layout_editor_absoluteX="330dp" />
-
-    <ImageView
-        android:id="@+id/partekatu"
-        android:layout_width="72dp"
-        android:layout_height="56dp"
-        app:srcCompat="@drawable/partekatu"
-        app:tint="#FFFFFF"
-        tools:layout_editor_absoluteX="531dp"
-        tools:layout_editor_absoluteY="355dp" />
+        app:tint="#FFFFFF" />
 
     <ImageView
         android:id="@+id/soinua"
         android:layout_width="72dp"
         android:layout_height="56dp"
         android:clickable="false"
+        app:layout_constraintBottom_toTopOf="@+id/cover"
+        app:layout_constraintEnd_toEndOf="@+id/bolumenBarra"
+        app:layout_constraintStart_toStartOf="@+id/bolumenBarra"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/soinua"
-        app:tint="#FFFFFF"
-        tools:layout_editor_absoluteX="587dp"
-        tools:layout_editor_absoluteY="616dp" />
+        app:tint="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/pasatutakoDenbora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0:25"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/denboraBarra"
+        app:layout_constraintEnd_toStartOf="@+id/denboraBarra"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/denboraBarra" />
+
+    <TextView
+        android:id="@+id/faltaDenDenbora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1:15"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/denboraBarra"
+        app:layout_constraintEnd_toStartOf="@id/bolumenBarra"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/denboraBarra"
+        app:layout_constraintTop_toTopOf="@+id/denboraBarra" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="1dp"
+        android:layout_height="446dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
