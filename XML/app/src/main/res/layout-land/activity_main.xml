@@ -47,107 +47,13 @@
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/titulua" />
 
-    <!--    <ImageButton-->
-    <!--        android:id="@+id/play"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:backgroundTint="#4334B3"-->
-    <!--        app:layout_constraintBottom_toTopOf="@+id/lista"-->
-    <!--        app:layout_constraintEnd_toStartOf="@+id/hurrengoa"-->
-    <!--        app:layout_constraintHorizontal_bias="0.5"-->
-    <!--        app:layout_constraintStart_toEndOf="@+id/aurrekoa"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/denboraBarra"-->
-    <!--        app:srcCompat="@android:drawable/ic_media_play"-->
-    <!--        app:tint="#FFFFFF" />-->
-
-    <!--    <ImageButton-->
-    <!--        android:id="@+id/aurrekoa"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:backgroundTint="#4334B3"-->
-    <!--        app:layout_constraintBottom_toTopOf="@+id/letra"-->
-    <!--        app:layout_constraintEnd_toStartOf="@+id/play"-->
-    <!--        app:layout_constraintHorizontal_bias="0.5"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/denboraBarra"-->
-    <!--        app:srcCompat="@android:drawable/ic_media_previous"-->
-    <!--        app:tint="#FFFFFF" />-->
-
-    <!--    <ImageButton-->
-    <!--        android:id="@+id/hurrengoa"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:backgroundTint="#4334B3"-->
-    <!--        app:layout_constraintBottom_toTopOf="@+id/partekatu"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.5"-->
-    <!--        app:layout_constraintStart_toEndOf="@+id/play"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/denboraBarra"-->
-    <!--        app:srcCompat="@android:drawable/ic_media_next"-->
-    <!--        app:tint="#FFFFFF" />-->
-
-    <!--    <ImageButton-->
-    <!--        android:id="@+id/partekatu"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:backgroundTint="#4334B3"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.5"-->
-    <!--        app:layout_constraintStart_toEndOf="@+id/lista"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/hurrengoa"-->
-    <!--        app:srcCompat="@android:drawable/ic_menu_share"-->
-    <!--        app:tint="#FFFFFF" />-->
-
-    <!--    <ImageButton-->
-    <!--        android:id="@+id/lista"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:backgroundTint="#4334B3"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toStartOf="@+id/partekatu"-->
-    <!--        app:layout_constraintHorizontal_bias="0.5"-->
-    <!--        app:layout_constraintStart_toEndOf="@+id/letra"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/play"-->
-    <!--        app:srcCompat="@android:drawable/ic_menu_sort_by_size"-->
-    <!--        app:tint="#FFFFFF" />-->
-
-    <!--    <ImageButton-->
-    <!--        android:id="@+id/soinua"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:backgroundTint="#4334B3"-->
-    <!--        android:clickable="false"-->
-    <!--        app:layout_constraintBottom_toTopOf="@+id/cover"-->
-    <!--        app:layout_constraintEnd_toEndOf="@+id/bolumenBarra"-->
-    <!--        app:layout_constraintHorizontal_bias="0.495"-->
-    <!--        app:layout_constraintStart_toStartOf="@+id/bolumenBarra"-->
-    <!--        app:layout_constraintTop_toTopOf="parent"-->
-    <!--        app:srcCompat="@android:drawable/ic_lock_silent_mode_off"-->
-    <!--        app:tint="#FFFFFF" />-->
-
-    <!--    <ImageButton-->
-    <!--        android:id="@+id/letra"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:backgroundTint="#4334B3"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toStartOf="@+id/lista"-->
-    <!--        app:layout_constraintHorizontal_bias="0.5"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/aurrekoa"-->
-    <!--        app:srcCompat="@android:drawable/ic_menu_sort_alphabetically"-->
-    <!--        app:tint="#FFFFFF" />-->
-
     <SeekBar
         android:id="@+id/denboraBarra"
-        android:layout_width="171dp"
-        android:layout_height="25dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
         android:progress="25"
         android:progressDrawable="@drawable/barra_pertsonalizatua"
         android:progressTint="#000000"
-        android:scaleX="2"
-        android:scaleY="1.6"
         android:thumb="@drawable/thumb_pertsonalizatua"
         android:thumbTint="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/playPause"
@@ -158,16 +64,14 @@
 
     <SeekBar
         android:id="@+id/bolumenBarra"
-        android:layout_width="171dp"
-        android:layout_height="25dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:progress="70"
         android:progressDrawable="@drawable/barra_pertsonalizatua"
         android:progressTint="@color/black"
         android:rotation="-90"
-        android:scaleX="2"
-        android:scaleY="1.6"
         android:thumb="@drawable/thumb_pertsonalizatua"
         android:thumbTint="@color/white"
-        android:progress="70"
         app:layout_constraintBottom_toBottomOf="@+id/cover"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
