@@ -66,22 +66,7 @@
         app:layout_constraintTop_toBottomOf="@+id/taldea"
     />
 
-    <SeekBar
-        android:id="@+id/bolumenBarra"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:progress="70"
-        android:progressDrawable="@drawable/barra_pertsonalizatua"
-        android:progressTint="@color/black"
-        android:rotation="-90"
-        android:thumb="@drawable/thumb_pertsonalizatua"
-        android:thumbTint="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/cover"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cover"
-        app:layout_constraintTop_toTopOf="@+id/cover" />
-
-<!--    <ImageButton-->
+    <!--    <ImageButton-->
 <!--        android:id="@+id/play"-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->
@@ -173,6 +158,21 @@
 <!--        app:srcCompat="@android:drawable/ic_menu_sort_alphabetically"-->
 <!--        app:tint="#FFFFFF" />-->
 
+    <SeekBar
+        android:id="@+id/bolumenBarra"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:progress="70"
+        android:progressDrawable="@drawable/barra_pertsonalizatua"
+        android:progressTint="@color/black"
+        android:rotation="-90"
+        android:thumb="@drawable/thumb_pertsonalizatua"
+        android:thumbTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/cover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cover"
+        app:layout_constraintTop_toBottomOf="@+id/soinua" />
+
     <ImageView
         android:id="@+id/aurrekoa"
         android:layout_width="72dp"
@@ -261,16 +261,13 @@
         android:id="@+id/soinua"
         android:layout_width="72dp"
         android:layout_height="56dp"
-        app:tint="#FFFFFF"
         android:clickable="false"
-        app:layout_constraintBottom_toTopOf="@+id/cover"
-        app:layout_constraintEnd_toEndOf="@+id/bolumenBarra"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/bolumenBarra"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bolumenBarra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cover"
+        app:layout_constraintTop_toTopOf="@+id/cover"
         app:srcCompat="@drawable/soinua"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="616dp" />
+        app:tint="#FFFFFF" />
 
     <TextView
         android:id="@+id/pasatutakoDenbora"

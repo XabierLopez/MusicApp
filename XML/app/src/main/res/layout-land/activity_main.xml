@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundvertical3"
+    android:background="@drawable/backgroundhorizontal3"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,13 +13,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/aldrich"
-        android:scaleX="3"
-        android:scaleY="3"
         android:text="@string/heaven_and_hell"
         android:textColor="@color/white"
+        android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/taldea"
-        app:layout_constraintEnd_toStartOf="@+id/bolumenBarra"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/taldea"
+        app:layout_constraintStart_toStartOf="@+id/taldea"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -38,13 +37,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/aldrich"
-        android:scaleX="2"
-        android:scaleY="2"
         android:text="@string/black_sabbath"
         android:textColor="@color/white"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/denboraBarra"
-        app:layout_constraintEnd_toStartOf="@+id/bolumenBarra"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/faltaDenDenbora"
+        app:layout_constraintStart_toStartOf="@+id/pasatutakoDenbora"
         app:layout_constraintTop_toBottomOf="@+id/titulua" />
 
     <SeekBar
@@ -62,9 +60,22 @@
         app:layout_constraintStart_toEndOf="@+id/pasatutakoDenbora"
         app:layout_constraintTop_toBottomOf="@+id/taldea" />
 
+    <TextView
+        android:id="@+id/faltaDenDenbora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1:15"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/denboraBarra"
+        app:layout_constraintEnd_toStartOf="@+id/bolumenBarra"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/denboraBarra"
+        app:layout_constraintTop_toTopOf="@+id/denboraBarra" />
+
     <SeekBar
         android:id="@+id/bolumenBarra"
-        android:layout_width="250dp"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:progress="70"
         android:progressDrawable="@drawable/barra_pertsonalizatua"
@@ -75,8 +86,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/cover"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/denboraBarra"
-        app:layout_constraintTop_toTopOf="@+id/cover" />
+        app:layout_constraintStart_toEndOf="@+id/faltaDenDenbora"
+        app:layout_constraintTop_toBottomOf="@+id/soinua" />
 
     <ImageView
         android:id="@+id/aurrekoa"
@@ -85,7 +96,7 @@
         app:layout_constraintBottom_toTopOf="@+id/letra"
         app:layout_constraintEnd_toStartOf="@+id/playPause"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/pasatutakoDenbora"
         app:layout_constraintTop_toBottomOf="@+id/denboraBarra"
         app:srcCompat="@drawable/aurrekoa"
         app:tint="#FFFFFF" />
@@ -97,7 +108,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/lista"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/pasatutakoDenbora"
         app:layout_constraintTop_toBottomOf="@+id/aurrekoa"
         app:srcCompat="@drawable/letra"
         app:tint="#FFFFFF" />
@@ -119,7 +130,7 @@
         android:layout_width="72dp"
         android:layout_height="56dp"
         app:layout_constraintBottom_toTopOf="@+id/partekatu"
-        app:layout_constraintEnd_toStartOf="@+id/bolumenBarra"
+        app:layout_constraintEnd_toEndOf="@+id/faltaDenDenbora"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/playPause"
         app:layout_constraintTop_toBottomOf="@+id/denboraBarra"
@@ -131,7 +142,7 @@
         android:layout_width="72dp"
         android:layout_height="56dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/bolumenBarra"
+        app:layout_constraintEnd_toEndOf="@+id/faltaDenDenbora"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/lista"
         app:layout_constraintTop_toBottomOf="@+id/hurrengoa"
@@ -155,10 +166,10 @@
         android:layout_width="72dp"
         android:layout_height="56dp"
         android:clickable="false"
-        app:layout_constraintBottom_toTopOf="@+id/cover"
+        app:layout_constraintBottom_toTopOf="@+id/bolumenBarra"
         app:layout_constraintEnd_toEndOf="@+id/bolumenBarra"
         app:layout_constraintStart_toStartOf="@+id/bolumenBarra"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cover"
         app:srcCompat="@drawable/soinua"
         app:tint="#FFFFFF" />
 
@@ -173,19 +184,6 @@
         app:layout_constraintEnd_toStartOf="@+id/denboraBarra"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toTopOf="@+id/denboraBarra" />
-
-    <TextView
-        android:id="@+id/faltaDenDenbora"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1:15"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/denboraBarra"
-        app:layout_constraintEnd_toStartOf="@id/bolumenBarra"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/denboraBarra"
         app:layout_constraintTop_toTopOf="@+id/denboraBarra" />
 
     <LinearLayout
