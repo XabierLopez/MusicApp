@@ -1,6 +1,5 @@
 package com.example.musicapp
 
-
 import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,6 +7,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.material3.Slider
@@ -30,6 +30,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.musicapp.ui.theme.MusicAppTheme
 
+const val hasierakoBolumena=0.7f
+const val hasierakoDenbora=0.25f
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,38 +39,20 @@ class MainActivity : ComponentActivity() {
         setContent {
             MusicAppTheme {
                 val configuration = LocalConfiguration.current
-
                 when (configuration.orientation) {
                     Configuration.ORIENTATION_LANDSCAPE -> {
-                        MusicAppHorizontala(0.7f,0.25f,R.drawable.backgroundvertical3)
+                        MusicAppHorizontala(R.drawable.backgroundvertical3)
                     }
-                    else -> { // Incluye ORIENTATION_PORTRAIT y el resto
-                        MusicAppBertikala(0.7f,R.drawable.backgroundvertical3)
+                    else -> {
+                        MusicAppBertikala(R.drawable.backgroundvertical3)
                     }
                 }
-
             }
         }
     }
 }
-//
-//@Composable
-//fun MusicApp(atzekoIrudia:Int, bertikala: Boolean){
-//    if (bertikala){
-//        MusicAppBertikala(0.7f, R.drawable.backgroundvertical3)
-//    }else{
-//        MusicAppHorizontala(0.7f,0.25f, R.drawable.backgroundvertical3)
-//    }
-//
-//}
-
-
-
 @Composable
-fun MusicAppBertikala(bolumena:Float, atzekoIrudia: Int) {
-
-
-
+fun MusicAppBertikala(atzekoIrudia: Int) {
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
             painter = painterResource(atzekoIrudia),
@@ -78,54 +62,28 @@ fun MusicAppBertikala(bolumena:Float, atzekoIrudia: Int) {
             ,
             contentScale = ContentScale.Crop
         )
-
-        // Aquí pones el contenido UI que ya tenías
         Column(
             modifier = Modifier.fillMaxSize()
                 .padding(20.dp)
             ,
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.SpaceEvenly
-
         ) {
             Row(
                 modifier = Modifier
-                    .fillMaxWidth()
-//                    .padding(horizontal = 16.dp),
-                        ,
+                    .fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
-//                horizontalArrangement = Arrangement.Center
             ){
-
                 Spacer(modifier = Modifier.weight(0.1f))
-
-                   Portada(Modifier.weight(1f))
-
-//                    Spacer(modifier = Modifier.weight(1f))
-
-//                    Spacer(modifier = Modifier.weight(1f))
-
-                Bolumena(Modifier.weight(0.1f), bolumena )
-
-
+                Portada(Modifier.weight(1f))
+                Bolumena(Modifier.weight(0.1f) )
             }
-
-
-
-
-//                Spacer(modifier = Modifier.height(8.dp))
-
             Edukiak(Modifier.fillMaxSize())
         }
     }
-
 }
-
-
-
 @Composable
-fun MusicAppHorizontala(bolumena: Float, denbora: Float, atzekoIrudia: Int){
-
+fun MusicAppHorizontala(atzekoIrudia: Int){
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
             painter = painterResource(atzekoIrudia),
@@ -140,55 +98,40 @@ fun MusicAppHorizontala(bolumena: Float, denbora: Float, atzekoIrudia: Int){
             modifier = Modifier.fillMaxSize()
                 .padding(20.dp)
         ) {
-
             Portada(Modifier.weight(1f).fillMaxHeight())
             Edukiak(Modifier.weight(0.75f).fillMaxHeight())
-            Bolumena(Modifier.weight(0.25f), bolumena)
+            Bolumena(Modifier.weight(0.25f))
         }
     }
 }
-
 @Preview(
     device = "spec:parent=pixel_8_pro"
 )
 @Composable
 fun MusicAppBertikalaPreview() {
     MusicAppTheme {
-        MusicAppBertikala(0.7f,R.drawable.backgroundvertical3)
+        MusicAppBertikala(R.drawable.backgroundvertical3)
     }
 }
-
 @Preview(
     device = "spec:parent=pixel_8_pro,orientation=landscape"
 )
 @Composable
 fun MusicAppHorizontalaPreview() {
     MusicAppTheme {
-        MusicAppHorizontala(0.7f, 0.25f, R.drawable.backgroundhorizontal3)
+        MusicAppHorizontala(R.drawable.backgroundhorizontal3)
     }
 }
-
 @Composable
-fun Bolumena(modifier:Modifier, bolumena: Float){
-    var bolumena by remember { mutableStateOf(bolumena) }
-    // Volumen vertical + icono
+fun Bolumena(modifier:Modifier){
+    var bolumena by remember { mutableStateOf(hasierakoBolumena) }
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceEvenly,
         modifier = modifier
-//                            .padding(end = 16.dp)
     ) {
         Ikonoa(R.drawable.soinua, Modifier.requiredWidth(72.dp).requiredHeight(56.dp))
-//        Image(
-//            painter = painterResource(id = R.drawable.soinua),
-//            contentDescription = null,
-//            modifier = Modifier
-//                .requiredWidth(72.dp)
-//                .requiredHeight(56.dp)
-////                                .size(width = 72.dp, height = 56.dp)
-//        )
         Box(
-
             modifier = Modifier
                 .height(210.dp)
                 .width(10.dp)
@@ -200,26 +143,20 @@ fun Bolumena(modifier:Modifier, bolumena: Float){
                     .fillMaxSize()
                     .requiredWidth(200.dp)
                     .rotate(-90f)
-
             )
         }
     }
 }
-
 @Composable
 fun Portada(modifier: Modifier){
-    // Imagen principal
     Image(
         painter = painterResource(id = R.drawable.blacksabbathcover),
         contentDescription = "albumaren portada",
         modifier = modifier
-//            .fillMaxSize()
             .width(250.dp)
             .height(250.dp),
-//        contentScale = ContentScale.Crop
     )
 }
-
 @Composable
 fun Ikonoa(baliabideId:Int, modifier: Modifier){
     Image(
@@ -227,16 +164,18 @@ fun Ikonoa(baliabideId:Int, modifier: Modifier){
         colorFilter = ColorFilter.tint(Color.White),
         contentDescription = null,
         modifier = modifier
-//            .weight(1f)
             .size(72.dp, 56.dp)
     )
 }
-
+@Composable
+fun IkonoAldakorra(baliabideId1: Int, baliabideId2: Int){
+    var isPlaying by remember { mutableStateOf(false) }
+    val baliabideId = if (isPlaying) baliabideId1 else baliabideId2
+    Ikonoa(baliabideId, Modifier.clickable{isPlaying=!isPlaying})
+}
 @Composable
 fun Edukiak(modifier: Modifier){
-    // Estados para sliders
-    var progress by remember { mutableStateOf(0.25f) }
-
+    var progress by remember { mutableStateOf(hasierakoDenbora) }
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceEvenly,
@@ -265,13 +204,11 @@ fun Edukiak(modifier: Modifier){
                 color = Color.White,
                 modifier = Modifier.padding(end = 8.dp)
             )
-
             Slider(
                 value = progress,
                 onValueChange = { progress = it },
                 modifier = Modifier.weight(1f)
             )
-
             Text(
                 text = "1:15",
                 fontSize = 24.sp,
@@ -284,39 +221,9 @@ fun Edukiak(modifier: Modifier){
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
         ) {
-
-
-
             Ikonoa(R.drawable.aurrekoa, Modifier.weight(1f))
-
-//            Image(
-//                painter = painterResource(id = R.drawable.aurrekoa),
-//                colorFilter = ColorFilter.tint(Color(255,255,255)),
-//                contentDescription = null,
-//                modifier = Modifier
-//                    .weight(1f)
-//                    .size(72.dp, 56.dp)
-//            )
-            Ikonoa(R.drawable.play, Modifier.weight(1f))
-//            Image(
-//                painter = painterResource(id = R.drawable.play),
-//                colorFilter = ColorFilter.tint(Color(255,255,255)),
-//                contentDescription = null,
-//                modifier = Modifier
-//                    .weight(1f)
-//                    .size(72.dp, 56.dp)
-//
-//            )
+            IkonoAldakorra(R.drawable.pause,R.drawable.play)
             Ikonoa(R.drawable.hurrengoa, Modifier.weight(1f))
-//            Image(
-//                painter = painterResource(id = R.drawable.hurrengoa),
-//                colorFilter = ColorFilter.tint(Color(255,255,255)),
-//                contentDescription = null,
-//                modifier = Modifier
-//                    .weight(1f)
-//                    .size(72.dp, 56.dp)
-//            )
-
         }
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -324,52 +231,8 @@ fun Edukiak(modifier: Modifier){
             horizontalArrangement = Arrangement.Center
         ) {
             Ikonoa(R.drawable.letra, Modifier.weight(1f))
-//        Image(
-//            painter = painterResource(id = R.drawable.letra),
-//            contentDescription = null,
-//            modifier = Modifier
-//                .weight(1f)
-//                .size(72.dp, 56.dp)
-//        )
             Ikonoa(R.drawable.lista, Modifier.weight(1f))
-//        Image(
-//            painter = painterResource(id = R.drawable.lista),
-//            contentDescription = null,
-//            modifier = Modifier
-//                .weight(1f)
-//                .size(72.dp, 56.dp)
-//        )
             Ikonoa(R.drawable.partekatu, Modifier.weight(1f))
-//        Image(
-//            painter = painterResource(id = R.drawable.partekatu),
-//            contentDescription = null,
-//            modifier = Modifier
-//                .weight(1f)
-//                .size(72.dp, 56.dp)
-//        )
         }
-
     }
-//    // Título
-//
-//
-//    Spacer(modifier = Modifier.height(4.dp))
-//
-//    // Banda
-//
-//
-//    Spacer(modifier = Modifier.height(16.dp))
-//
-//    // Barra de tiempo y tiempos
-//
-//
-//    Spacer(modifier = Modifier.height(16.dp))
-//
-//    // Contenedor horizontal para volumen y controles
-//
-//
-//    Spacer(modifier = Modifier.height(24.dp))
-//
-//    // Iconos inferiores
-
 }
