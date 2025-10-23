@@ -136,11 +136,14 @@ fun MusicAppHorizontala(bolumena: Float, denbora: Float, atzekoIrudia: Int){
         )
         Row(
             horizontalArrangement = Arrangement.SpaceEvenly,
-            verticalAlignment = Alignment.CenterVertically
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.fillMaxSize()
+                .padding(20.dp)
         ) {
 
-            Portada(Modifier.weight(1f))
-            Edukiak(Modifier.fillMaxSize())
+            Portada(Modifier.weight(1f).fillMaxHeight())
+            Edukiak(Modifier.weight(0.75f).fillMaxHeight())
+            Bolumena(Modifier.weight(0.25f), bolumena)
         }
     }
 }
